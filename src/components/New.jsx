@@ -1,12 +1,12 @@
 import React from 'react'
 
-export const New = ({children, title, image_url, index}) => {
+export const New = ({children, title, image, index}) => {
   return (
     <div className="flex">
         <figure className='w-1/3'>
             <img
             className='w-full object-cover'
-            src={image_url} 
+            src={image} 
             alt="title"/>
         </figure>
         <div className="w-2/3 flex flex-col justify-between my-2 ml-8">

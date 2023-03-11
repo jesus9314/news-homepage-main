@@ -6,8 +6,8 @@ export const TopNews = () => {
   return (
     <div className='mt-24 flex flex-col gap-16'>
         {
-          dataNews.map( ({title, content,image_url}, i) =>(
-            <New title={title} image_url={image_url} index={i}>
+          dataNews.map( ({title, content,image}, i) =>(
+            <New title={title} image={image} index={i}>
               {content}
               </New>
           ) )
