@@ -6,21 +6,23 @@ import { NavDesktop } from "./NavDesktop";
 import { NavMobile } from "./NavMobile";
 
 export const Header = () => {
-	const [showModal, setShowModal] = useState(false)
+	const [showModal, setShowModal] = useState(false);
 	return (
 		<header className="w-full h-20 flex items-center justify-between fixed top-0 bg-white px-4 max-w-7xl mx-auto">
-			<img src={logo} alt="Logo News Homepage" />
+			<a href="#">
+				<img src={logo} alt="Logo News Homepage" />
+			</a>
 			<NavDesktop />
-			<button 
-			onClick={()=> setShowModal(true)}
-			className="md:hidden"
-			>
-				<img src={menuLogo} alt="Desktop web-3 Image"/>
+			<button onClick={() => setShowModal(true)} className="md:hidden">
+				<img src={menuLogo} alt="Desktop web-3 Image" />
 			</button>
-			<CategoryModal 
-			isVisible={showModal} 
-			onClose={()=>{setShowModal(false)}}>
-				<NavMobile/>
+			<CategoryModal
+				isVisible={showModal}
+				onClose={() => {
+					setShowModal(false);
+				}}
+			>
+				<NavMobile />
 			</CategoryModal>
 		</header>
 	);
